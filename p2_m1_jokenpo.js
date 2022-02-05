@@ -97,7 +97,7 @@ function teste(a, b) {
   if (
     (a === "pedra" && b === "papel") ||
     (a === "papel" && b === "tesoura") ||
-    (a === "tesoura" && b === "papel")
+    (a === "tesoura" && b === "pedra")
   ) {
     return (
       pontosPc++,
