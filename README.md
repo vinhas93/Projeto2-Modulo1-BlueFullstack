@@ -1,4 +1,4 @@
-# Projeto2-Modulo1-BlueFullstack
+# Projeto2-Modulo1-BlueFullstack <img src="https://user-images.githubusercontent.com/95504029/151560441-2e792d97-fd65-462c-8fd7-70f581de5674.gif" width="120">
 ### Segundo projeto do Módulo 1 (Lógica de programação) do curso Desenvolvimento Web Fullstack
 
 - Linguagem: JavaScript
