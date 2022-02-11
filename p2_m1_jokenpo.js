@@ -10,7 +10,9 @@ const prompt = require("prompt-sync")();
 // - Perguntar se o Jogador quer jogar novamente, se sim inicie volte a escolha de quantidade de rodadas,
 // se não finalize o programa.
 
-console.log(`\t\tJokenpô\n`);
+console.log(`
+        Jokenpô
+        `);
 let nome = prompt("Por favor, digite o seu nome: ");
 console.log()
 
@@ -26,6 +28,7 @@ do {
   let pont;
 
   for (let i = 0; i < partida; i++) {
+    console.clear()
     console.log(`
     Escolha: 
 
@@ -72,24 +75,31 @@ Jogar de novo?
     `);
     start = prompt("R:").toLowerCase();
 
-    if (start == 1 || start == "sim") {
-      console.log(`
-Deseja manter a pontuação?
-      
-  1)Sim         2)Não
-      `);
-      pont = prompt("");
-
-      if (pont == 2 || pont == "nao") {
-        pontosJogador = 0;
-        pontosPc = 0;
-      }
-    } else if (start != 1 || start !== 2 || start != "sim" || start != "nao"|| pont != 1 || pont != "sim") {
-      console.log(`Não entendi`);
+    
+    if (start != 1 && start !== 2 && start != "sim" && start != "nao") {
+      console.log(`Não entendi.`);
     }
   }while (start != 1 && start !== 2 && start != "sim" && start != "nao")
 
-} while (start !== 2 && start != "nao");
+  if (start == 1 || start == "sim") {
+    do{ 
+      console.log(`
+Deseja manter a pontuação?
+    
+1)Sim         2)Não
+    `);
+      pont = prompt("R:").toLowerCase();
+      if(pont!= 1 && pont!= 2 && pont!= "sim" && pont!= "nao"){
+      console.log(`Não entendi.`)
+      }
+    }while (pont!= 1 && pont!= 2 && pont!= "sim" && pont!= "nao")
+  }
+    if (pont == 2 || pont == "nao") {
+      pontosJogador = 0;
+      pontosPc = 0;
+    }
+
+} while (start != 2 && start != "nao");
 
 console.log(`Muito bem ${nome}, até a próxima.`);
 
